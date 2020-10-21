@@ -1,25 +1,22 @@
 package com.ferminmine.AmericaTransitAccidents;
 
 import com.ferminmine.AmericaTransitAccidents.repositories.AccidentsRepository;
+import com.mongodb.DBObject;
+import com.mongodb.client.MongoClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.mongodb.core.MongoTemplate;
 
 @SpringBootApplication
-public class AmericaTransitAccidentsApplication implements CommandLineRunner {
+public class AmericaTransitAccidentsApplication {
 
 	@Autowired
 	AccidentsRepository accidentsRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(AmericaTransitAccidentsApplication.class, args);
-		System.out.println("Hi!");
 	}
 
-	@Override
-	public void run(String... args) throws Exception {
-		System.out.println("Count!");
-		System.out.println(accidentsRepository.count());
-	}
 }
