@@ -60,4 +60,10 @@ public class CustomAccidentRepositoryQueriesTest {
                 32869
         );
     }
+
+    @Test
+    public void testMostCommonConditions() {
+        System.out.println("Most Common Conditions of Accidents in US");
+        accidentsRepository.getMostCommonConditions();
+    }
 }

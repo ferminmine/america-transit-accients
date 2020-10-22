@@ -45,7 +45,7 @@ db.getCollection("US_Accidents_Dec19").find({ location: { $geoWithin : {
         }
 }}, { "City": 1, "location": 1});
 
-
----
-
-("{ 'location': { $geoWithin: { $geometry: { 'type': 'Polygon', 'coordinates': [ [ ['-109.0448', '37.0004'], ['-102.0424', '36.9949'], ['-102.0534', '41.0006'], ['-109.0489', '40.9996'], ['-109.0448', '37.0004'] ] ]}}}}")
+----
+db.getCollection("US_Accidents_Dec19").aggregate([{
+    "$sortByCount": "$Astronomical_Twilight"
+}])
